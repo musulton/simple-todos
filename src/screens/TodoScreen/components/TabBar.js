@@ -15,7 +15,7 @@ const TabBar = () => {
 
     return (
         <View style={styles.container}>
-            <TabBarItem border selected title='All' setType={onSetType} type={todoType}/>
+            <TabBarItem border title='All' setType={onSetType} type={todoType}/>
             <TabBarItem border title='Active' setType={onSetType} type={todoType}/>
             <TabBarItem border title='Complete' setType={onSetType} type={todoType}/>
         </View>)
