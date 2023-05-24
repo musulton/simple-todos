@@ -1,8 +1,14 @@
 import React from 'react'
 import {View} from 'react-native'
+import {useSelector} from "react-redux";
+
 import ToDo from "./ToDo";
 
-const ToDoList = ({todos,toggleComplete,deleteTodo,type}) => {
+
+const ToDoList = () => {
+    const todos = useSelector(state => state.ToDoReducer.todo);
+    const type = useSelector(state => state.ToDoReducer.type);
+
     const getVisibleTodos = (todos, type) => {
         switch (type) {
             case 'All':
@@ -13,9 +19,9 @@ const ToDoList = ({todos,toggleComplete,deleteTodo,type}) => {
                 return todos.filter((t) => !t.complete)
         } }
     let selectedTodos = getVisibleTodos(todos, type)
-    let todoItems = selectedTodos.map((todo) => {
+    let todoItems = selectedTodos?.map((todo) => {
         return (
-            <ToDo key={todo.todoIndex} todo={todo}  toggleComplete={toggleComplete} deleteTodo={deleteTodo}/>
+            <ToDo key={todo.todoIndex} todo={todo}/>
         );
     })
     return (

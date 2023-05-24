@@ -1,16 +1,25 @@
 import React from 'react'
 import {View, StyleSheet} from 'react-native'
+import {useDispatch, useSelector} from "react-redux";
+
+import {changeType} from "../../../shared/store/todo/ToDoAction";
 import TabBarItem from "../../../shared/components/TabBarItem";
 
-const TabBar = ({setType, type}) => (
-    <View style={styles.container}>
-        <TabBarItem type={type} title='All'
-                    setType={() => setType('All')}/>
-        <TabBarItem type={type} border title='Active'
-                    setType={() => setType('Active')}/>
-        <TabBarItem type={type} border title='Complete'
-                    setType={() => setType('Complete')}/>
-    </View>)
+const TabBar = () => {
+    const dispatch = useDispatch();
+    const todoType = useSelector(state => state.ToDoReducer.type);
+
+    const onSetType = (title) => {
+        dispatch(changeType(title));
+    }
+
+    return (
+        <View style={styles.container}>
+            <TabBarItem border selected title='All' setType={onSetType} type={todoType}/>
+            <TabBarItem border title='Active' setType={onSetType} type={todoType}/>
+            <TabBarItem border title='Complete' setType={onSetType} type={todoType}/>
+        </View>)
+}
 
 const styles = StyleSheet.create({
     container: {

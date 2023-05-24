@@ -1,69 +1,62 @@
 import React, {useState} from 'react';
-import {ScrollView, StyleSheet, View,} from 'react-native';
+import {ScrollView, StyleSheet, View, ActivityIndicator, KeyboardAvoidingView} from 'react-native';
+import {useDispatch, useSelector} from "react-redux";
+
+import {addTodo, showLoading, setTodoName} from "../../shared/store/todo/ToDoAction";
 import Heading from "../../shared/components/Heading";
 import Input from "../../shared/components/Input";
 import ToDoList from "./components/ToDoList";
 import SubmitButton from "../../shared/components/SubmitButton";
 import TabBar from "./components/TabBar";
 
-let todoIndex = 0;
-
 const ToDoScreen = () => {
-    const [appState, setAppState] = useState({
-        inputValue: '',
-        todos: [],
-        type: 'All'
-    })
-
-    const inputChange = (inputValue) => {
-        setAppState({...appState, inputValue: inputValue});
-    }
+    const dispatch = useDispatch();
+    const currIndex = useSelector((state) => state.ToDoReducer.todoIndex);
+    const isLoading = useSelector((state) => state.ToDoReducer.isLoading);
+    const todoName = useSelector((state) => state.ToDoReducer.newTodoName);
 
     const submitTodo = () => {
-        if (appState.inputValue.match(/^\s*$/)) {
+        dispatch(showLoading(true));
+
+        if (todoName.match(/^\s*$/)) {
             return
         }
         const todo = {
-            title: appState.inputValue,
-            todoIndex,
+            title: todoName,
+            todoIndex: currIndex,
             complete: false
         }
-        todoIndex++
-        const todos = [...appState.todos, todo]
-        setAppState({...appState, inputValue: '', todos: todos});
+
+        /* Simulasi fetch API u/ memberi jeda sukses ketika menambah ToDo */
+        setTimeout(function () {
+            dispatch(addTodo(todo));
+            dispatch(showLoading(false));
+        }, 1000);
     }
 
-    const toggleComplete = (todoIndex) => {
-        let {todos} = appState;
-        todos.forEach((todo) => {
-            if (todo.todoIndex === todoIndex) {
-                todo.complete = !todo.complete;
-            }
-        })
-        setAppState({...appState, todos: todos});
-    }
-    const deleteTodo = (todoIndex) => {
-        let {todos} = appState;
-        todos = todos.filter((todo) => todo.todoIndex !== todoIndex)
-        setAppState({...appState, todos: todos});
+    const onInputChange = (text) => {
+        dispatch(setTodoName(text));
     }
 
-    const setType = (type) => {
-        setAppState({...appState, type: type});
-    }
     return (
-        <View style={styles.container}>
-            <Heading/>
-            <Input inputValue={appState.inputValue} inputChange={(text) => inputChange(text)}/>
-            <SubmitButton submitTodo={submitTodo}/>
-            <ScrollView
-                contentInsetAdjustmentBehavior="automatic" keyboardShouldPersistTaps="never" style={styles.content}>
-                <ToDoList todos={appState.todos} toggleComplete={toggleComplete}
-                          deleteTodo={deleteTodo} type={appState.type}/>
-
-            </ScrollView>
-            <TabBar type={appState.type} setType={setType}/>
-        </View>
+        <KeyboardAvoidingView style={styles.container}>
+            <View style={styles.content}>
+                <Heading/>
+                <Input inputValue={todoName} inputChange={onInputChange}/>
+                <SubmitButton submitTodo={submitTodo}/>
+                <ScrollView
+                    contentInsetAdjustmentBehavior="automatic"
+                    keyboardShouldPersistTaps="never"
+                    style={styles.content}
+                >
+                    <ToDoList />
+                </ScrollView>
+                <TabBar/>
+            </View>
+            {isLoading && <View style={styles.loading}>
+                <ActivityIndicator size={"large"} color="#0000ff"/>
+            </View>}
+        </KeyboardAvoidingView>
     );
 };
 
@@ -74,6 +67,18 @@ const styles = StyleSheet.create({
     content: {
         flex: 1,
         paddingTop: 10,
+    },
+    loading: {
+        flex: 1,
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        bottom: 0,
+        opacity: 0.5,
+        backgroundColor: 'black',
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 });
 
