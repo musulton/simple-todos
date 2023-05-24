@@ -1,14 +1,14 @@
 import React from 'react';
 import {Text, TouchableHighlight, View, StyleSheet} from "react-native";
 
-const SubmitButton = ({submitTodo}) => (
+const SubmitButton = ({title = "Submit", onSubmit}) => (
     <View style={styles.buttonContainer}>
         <TouchableHighlight
             underlayColor='#efefef'
             style={styles.button}
-            onPress={submitTodo}>
+            onPress={onSubmit}>
             <Text style={styles.submit}>
-                Submit
+                {title}
             </Text>
         </TouchableHighlight>
     </View>

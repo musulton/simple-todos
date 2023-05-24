@@ -1,24 +1,19 @@
-import { StyleSheet, SafeAreaView } from 'react-native';
+import {StatusBar} from 'react-native';
 import {Provider} from "react-redux";
 
 import configureStore from "./src/shared/store/store";
-import ToDoScreen from "./src/screens/TodoScreen/ToDoScreen";
+import Loading from "./src/shared/components/Loading";
+import RootNavigator from "./src/navigation/RootNavigator";
 
 const App = () => {
     const store = configureStore()
     return (
         <Provider store={store}>
-            <SafeAreaView style={styles.container}>
-                <ToDoScreen/>
-            </SafeAreaView>
+            <StatusBar backgroundColor={'#F2F2F2'}/>
+            <RootNavigator/>
+            <Loading/>
         </Provider>
     );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  }
-});
 
 export default App;

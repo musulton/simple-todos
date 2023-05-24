@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
-import {ScrollView, StyleSheet, View, ActivityIndicator, KeyboardAvoidingView} from 'react-native';
+import React from 'react';
+import {StyleSheet, View, KeyboardAvoidingView} from 'react-native';
 import {useDispatch, useSelector} from "react-redux";
 
 import {addTodo, showLoading, setTodoName} from "../../shared/store/todo/ToDoAction";
-import Heading from "../../shared/components/Heading";
 import Input from "../../shared/components/Input";
 import ToDoList from "./components/ToDoList";
 import SubmitButton from "../../shared/components/SubmitButton";
@@ -12,7 +11,6 @@ import TabBar from "./components/TabBar";
 const ToDoScreen = () => {
     const dispatch = useDispatch();
     const currIndex = useSelector((state) => state.ToDoReducer.todoIndex);
-    const isLoading = useSelector((state) => state.ToDoReducer.isLoading);
     const todoName = useSelector((state) => state.ToDoReducer.newTodoName);
 
     const submitTodo = () => {
@@ -41,17 +39,13 @@ const ToDoScreen = () => {
     return (
         <KeyboardAvoidingView style={styles.container}>
             <View style={styles.content}>
-                <Heading/>
-                <Input inputValue={todoName} inputChange={onInputChange}/>
-                <SubmitButton submitTodo={submitTodo}/>
+                <Input placeholder={'What needs to be done?'} inputValue={todoName} onInputChange={onInputChange}/>
+                <SubmitButton onSubmit={submitTodo}/>
                 <View style={styles.content}>
                     <ToDoList />
                 </View>
                 <TabBar/>
             </View>
-            {isLoading && <View style={styles.loading}>
-                <ActivityIndicator size={"large"} color="#0000ff"/>
-            </View>}
         </KeyboardAvoidingView>
     );
 };
