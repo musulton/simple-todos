@@ -1,9 +1,14 @@
 import React from 'react'
-import {View} from 'react-native'
+import {View, FlatList} from 'react-native'
 import {useSelector} from "react-redux";
 
 import ToDo from "./ToDo";
 
+const todoItems = ({item}) => {
+    return (
+        <ToDo todo={item}/>
+    );
+};
 
 const ToDoList = () => {
     const todos = useSelector(state => state.ToDoReducer.todo);
@@ -18,16 +23,14 @@ const ToDoList = () => {
             case 'Active':
                 return todos.filter((t) => !t.complete)
         } }
-    let selectedTodos = getVisibleTodos(todos, type)
-    let todoItems = selectedTodos?.map((todo) => {
-        return (
-            <ToDo key={todo.todoIndex} todo={todo}/>
-        );
-    })
+    const selectedTodos = getVisibleTodos(todos, type)
+
     return (
-        <View>
-            {todoItems}
-        </View>
+        <FlatList
+            data={selectedTodos}
+            renderItem={todoItems}
+            keyExtractor={item => item.todoIndex}
+        />
     )
 }
 export default ToDoList;
