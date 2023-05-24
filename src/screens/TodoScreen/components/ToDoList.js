@@ -3,6 +3,7 @@ import {View, FlatList} from 'react-native'
 import {useSelector} from "react-redux";
 
 import ToDo from "./ToDo";
+import EmptyState from "../../../shared/components/EmptyState";
 
 const todoItems = ({item}) => {
     return (
@@ -30,6 +31,8 @@ const ToDoList = () => {
             data={selectedTodos}
             renderItem={todoItems}
             keyExtractor={item => item.todoIndex}
+            contentContainerStyle={{flex: 1}}
+            ListEmptyComponent={<EmptyState text={"Data is still empty"} />}
         />
     )
 }
