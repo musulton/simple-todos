@@ -1,14 +1,14 @@
 import {useDispatch} from "react-redux";
 
 import {showError, showLoading} from "../../shared/store/app/AppAction";
-import {addTodo} from "../../shared/store/todo/ToDoAction";
+import {addTodo, setTodo} from "../../shared/store/todo/ToDoAction";
 import {MandatoryError} from "../../shared/utils/AppError";
 
 export const Todo = (service) => {
     const dispatch = useDispatch();
-    const {addTodoService} = service();
+    const {addTodoService, getTodoService} = service();
 
-    const onSubmitTodo = async (todoName) => {
+    const onSubmitTodo = async (todoName, onSuccess) => {
         try {
             dispatch(showLoading(true));
             if (!todoName) {
@@ -19,10 +19,20 @@ export const Todo = (service) => {
                 complete: false
             }
 
-            let todoId = await addTodoService(todo);
-            dispatch(addTodo(
-                {...todo, todoIndex: todoId.id}
-            ));
+            await addTodoService(todo);
+            onSuccess?.()
+        } catch (e) {
+            dispatch(showError(e.message));
+        } finally {
+            dispatch(showLoading(false));
+        }
+    }
+
+    const onLoadTodo = async () => {
+        try {
+            dispatch(showLoading(true));
+            const todos = await getTodoService();
+            dispatch(setTodo(todos))
         } catch (e) {
             dispatch(showError(e.message));
         } finally {
@@ -34,6 +44,7 @@ export const Todo = (service) => {
     return {
         onSubmitTodo,
         onDismissError,
+        onLoadTodo
     };
 };
 

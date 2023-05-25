@@ -1,8 +1,9 @@
-import {SHOW_ERROR, SHOW_LOADING} from "../../utils/constants";
+import {SHOW_ERROR, SHOW_LOADING, SHOULD_REFETCH} from "../../utils/constants";
 
 const initialState = {
     isLoading: false,
     error:'',
+    isRefetch: true
 };
 
 const AppReducer = (state = initialState, action) => {
@@ -18,6 +19,12 @@ const AppReducer = (state = initialState, action) => {
                 ...state,
                 error: action.payload
             };
+        }
+        case SHOULD_REFETCH: {
+            return {
+                ...state,
+                isRefetch: action.payload
+            }
         }
         default:
             return state;

@@ -1,17 +1,31 @@
 import React, {useState, useEffect} from 'react';
 import {StyleSheet, View, KeyboardAvoidingView} from 'react-native';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 import Input from "../../shared/components/Input";
 import ToDoList from "./components/ToDoList";
 import SubmitButton from "../../shared/components/SubmitButton";
 import TabBar from "./components/TabBar";
 import MessageBox from "../../shared/components/MessageBox";
+import {shouldRefetch} from "../../shared/store/app/AppAction";
 
 const ToDoScreen = ({todo}) => {
-    const {onSubmitTodo, onDismissError} = todo();
+    const dispatch = useDispatch();
+    const {onSubmitTodo, onDismissError, onLoadTodo} = todo();
     const [todoName, setTodoName] = useState('');
     const error = useSelector((state) => state.AppReducer.error);
+    const isRefetch = useSelector((state) => state.AppReducer.isRefetch);
+    const onRefetch = () => {
+        dispatch(shouldRefetch(true))
+    }
+
+    useEffect(() => {
+        if (isRefetch) {
+            onLoadTodo()
+            dispatch(shouldRefetch(false))
+        }
+    }, [isRefetch]);
+
 
     useEffect(() => {
         if (error) {
@@ -20,7 +34,7 @@ const ToDoScreen = ({todo}) => {
     })
 
     const submitTodo = () => {
-        onSubmitTodo(todoName);
+        onSubmitTodo(todoName, onRefetch);
     }
 
     return (

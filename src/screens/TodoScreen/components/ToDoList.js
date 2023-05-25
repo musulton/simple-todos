@@ -30,8 +30,8 @@ const ToDoList = () => {
         <FlatList
             data={selectedTodos}
             renderItem={todoItems}
-            keyExtractor={item => item.todoIndex}
-            contentContainerStyle={{flex: 1}}
+            keyExtractor={item => item.id}
+            contentContainerStyle={selectedTodos.length > 0 ? {} : {flex: 1}}
             ListEmptyComponent={<EmptyState text={"Data is still empty"} />}
         />
     )

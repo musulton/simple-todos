@@ -3,7 +3,7 @@ import {GlobalError, UnauthorizedError} from "../shared/utils/AppError";
 import LocalStorage from "../shared/utils/LocalStorage";
 
 const client = axios.create({
-    baseURL: "https://677a-180-244-28-131.ngrok-free.app",
+    baseURL: "https://ace3-180-244-28-131.ngrok-free.app",
 });
 
 client.interceptors.request.use(async (config) => {
