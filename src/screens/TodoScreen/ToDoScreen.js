@@ -1,45 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {StyleSheet, View, KeyboardAvoidingView} from 'react-native';
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
-import {addTodo, showLoading, setTodoName} from "../../shared/store/todo/ToDoAction";
 import Input from "../../shared/components/Input";
 import ToDoList from "./components/ToDoList";
 import SubmitButton from "../../shared/components/SubmitButton";
 import TabBar from "./components/TabBar";
+import MessageBox from "../../shared/components/MessageBox";
 
-const ToDoScreen = () => {
-    const dispatch = useDispatch();
-    const currIndex = useSelector((state) => state.ToDoReducer.todoIndex);
-    const todoName = useSelector((state) => state.ToDoReducer.newTodoName);
+const ToDoScreen = ({todo}) => {
+    const {onSubmitTodo, onDismissError} = todo();
+    const [todoName, setTodoName] = useState('');
+    const error = useSelector((state) => state.AppReducer.error);
+
+    useEffect(() => {
+        if (error) {
+            MessageBox('Error', error, () => onDismissError()).showAlert();
+        }
+    })
 
     const submitTodo = () => {
-        dispatch(showLoading(true));
-
-        if (todoName.match(/^\s*$/)) {
-            return
-        }
-        const todo = {
-            title: todoName,
-            todoIndex: currIndex,
-            complete: false
-        }
-
-        /* Simulasi fetch API u/ memberi jeda sukses ketika menambah ToDo */
-        setTimeout(function () {
-            dispatch(addTodo(todo));
-            dispatch(showLoading(false));
-        }, 1000);
-    }
-
-    const onInputChange = (text) => {
-        dispatch(setTodoName(text));
+        onSubmitTodo(todoName);
     }
 
     return (
         <KeyboardAvoidingView style={styles.container}>
             <View style={styles.content}>
-                <Input placeholder={'What needs to be done?'} inputValue={todoName} onInputChange={onInputChange}/>
+                <Input placeholder={'What needs to be done?'} inputValue={todoName} onInputChange={setTodoName}/>
                 <SubmitButton onSubmit={submitTodo}/>
                 <View style={styles.content}>
                     <ToDoList />

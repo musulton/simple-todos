@@ -10,6 +10,8 @@ import PopupMenu from "../shared/components/PopupMenu";
 import LoginService from "../services/LoginService";
 import {Login} from "../screens/LoginScreen/Login";
 import {navigationRef} from "./RootNavigation";
+import {Todo} from "../screens/TodoScreen/Todo";
+import ToDoService from "../services/TodoService";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +31,9 @@ const RootNavigator = () => {
                     headerRight: () => <PopupMenu navigation={navigation}/>
                 })}
             >
-                <Stack.Screen name={TODO_PATH} component={ToDoScreen} options={{ title: '' }}/>
+                <Stack.Screen name={TODO_PATH} options={{ title: '' }}>
+                    {props => <ToDoScreen {...props} todo={() => Todo(ToDoService)} />}
+                </Stack.Screen>
             </Stack.Group>
         </Stack.Navigator>
     </NavigationContainer>
