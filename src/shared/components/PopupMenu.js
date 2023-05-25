@@ -5,6 +5,7 @@ import Icon from "@expo/vector-icons/FontAwesome";
 
 import {LOGIN_PATH} from "../../navigation/NavigationPath";
 import {logout} from "../store/login/LoginAction";
+import LocalStorage from "../utils/LocalStorage";
 
 const PopupMenu = ({navigation}) => {
     const dispatch = useDispatch();
@@ -38,7 +39,8 @@ const PopupMenu = ({navigation}) => {
                     <View style={styles.centeredView}>
                         <TouchableWithoutFeedback>
                             <View style={styles.modalView}>
-                                <Pressable onPress={() => {
+                                <Pressable onPress={async () => {
+                                    await LocalStorage().removeData('token')
                                     dispatch(logout());
                                 }}>
                                     <Text style={styles.modalText}>Logout</Text>

@@ -17,8 +17,16 @@ const LocalStorage = () => {
         }
     }
 
+    const removeData = async (key) => {
+        try {
+            await AsyncStorage.removeItem(key)
+        } catch (e) {
+
+        }
+    }
+
     return {
-        setData, getData
+        setData, getData, removeData
     }
 }
 
