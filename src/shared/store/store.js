@@ -1,9 +1,10 @@
 import {combineReducers, createStore} from "redux";
 import ToDoReducer from "./todo/ToDoReducer";
 import LoginReducer from "./login/LoginReducer";
+import AppReducer from "./app/AppReducer";
 
 const rootReducer = combineReducers(
-    {ToDoReducer, LoginReducer}
+    {ToDoReducer, LoginReducer, AppReducer}
 );
 
 const configureStore = () => {

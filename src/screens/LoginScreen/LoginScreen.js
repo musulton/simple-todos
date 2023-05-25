@@ -1,46 +1,36 @@
 import React, {useEffect, useState} from 'react';
 import {SafeAreaView, StyleSheet, View,} from 'react-native';
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 import Input from "../../shared/components/Input";
 import SubmitButton from "../../shared/components/SubmitButton";
-import {TODO_PATH} from "../../navigation/NavigationPath";
-import {showLoading} from "../../shared/store/todo/ToDoAction";
-import {login} from "../../shared/store/login/LoginAction";
 import Heading from "../../shared/components/Heading";
+import MessageBox from "../../shared/components/MessageBox";
 
-const LoginScreen = ({navigation}) => {
-    const dispatch = useDispatch();
-    const [userName, setUserName] = useState('');
+const LoginScreen = ({login}) => {
+    const {onAuthenticate, onDismissError} = login();
+
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const isLoggedIn = useSelector((state) => state.LoginReducer.isLoggedIn);
+    const error = useSelector((state) => state.AppReducer.error);
 
     useEffect(() => {
-        if (isLoggedIn) {
-            dispatch(showLoading(false));
-            navigation.replace(TODO_PATH);
+        if (error) {
+            MessageBox('Error', error, () => onDismissError()).showAlert();
         }
-    }, [isLoggedIn])
-    const submitLogin = () => {
-        dispatch(showLoading(true));
+    })
 
-        setTimeout(function () {
-            if (userName === '123' && password === '123') {
-                dispatch(login(true));
-            } else {
-                dispatch(login(false));
-            }
-
-            dispatch(showLoading(false));
-        }, 1000);
+    const submitLogin = async () => {
+        onAuthenticate(email, password)
     }
+
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.content}>
                 <View style={{paddingBottom: 20}}>
                     <Heading title={'Todo'}/>
                 </View>
-                <Input placeholder={"Enter your username"} inputValue={userName} onInputChange={setUserName}/>
+                <Input placeholder={"Enter your email"} inputValue={email} onInputChange={setEmail}/>
                 <Input placeholder={"Enter your password"} isSecureText={true} inputValue={password} onInputChange={setPassword}/>
                 <SubmitButton title={"Submit"} onSubmit={submitLogin}/>
             </View>
