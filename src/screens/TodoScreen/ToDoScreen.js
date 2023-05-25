@@ -11,7 +11,7 @@ import {shouldRefetch} from "../../shared/store/app/AppAction";
 
 const ToDoScreen = ({todo}) => {
     const dispatch = useDispatch();
-    const {onSubmitTodo, onDismissError, onLoadTodo} = todo();
+    const {onSubmitTodo, onDismissError, onLoadTodo, onDeleteTodo, onCompletedTodo} = todo();
     const [todoName, setTodoName] = useState('');
     const error = useSelector((state) => state.AppReducer.error);
     const isRefetch = useSelector((state) => state.AppReducer.isRefetch);
@@ -37,13 +37,21 @@ const ToDoScreen = ({todo}) => {
         onSubmitTodo(todoName, onRefetch);
     }
 
+    const deleteTodo = (id) => {
+        onDeleteTodo(id, onRefetch)
+    }
+
+    const completedTodo = (todo) => {
+        onCompletedTodo(todo, onRefetch)
+    }
+
     return (
         <KeyboardAvoidingView style={styles.container}>
             <View style={styles.content}>
                 <Input placeholder={'What needs to be done?'} inputValue={todoName} onInputChange={setTodoName}/>
                 <SubmitButton onSubmit={submitTodo}/>
                 <View style={styles.content}>
-                    <ToDoList />
+                    <ToDoList onDelete={deleteTodo} onCompleted={completedTodo} />
                 </View>
                 <TabBar/>
             </View>

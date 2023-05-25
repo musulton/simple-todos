@@ -9,14 +9,13 @@ import ApiClient from "./src/services/ApiClient";
 
 const App = () => {
     const store = configureStore()
-    const apiClient = ApiClient();
 
     return (
         <Provider store={store}>
-            <DepProvider services={{apiClient}}>
-            <StatusBar backgroundColor={'#F2F2F2'}/>
-            <RootNavigator/>
-            <Loading/>
+            <DepProvider services={{apiClient: ApiClient}}>
+                <StatusBar backgroundColor={'#F2F2F2'}/>
+                <RootNavigator/>
+                <Loading/>
             </DepProvider>
         </Provider>
     );

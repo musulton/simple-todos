@@ -5,9 +5,13 @@ const LoginService = () => {
     const {apiClient} = useDeps();
     const callLoginService = async (email, password) => {
         try {
-            const data = await apiClient.post(`auth/login`, {
-                email,
-                password,
+            const data = await apiClient({
+                url: 'auth/login',
+                method: 'post',
+                params: {
+                    email,
+                    password,
+                }
             });
             console.log("data", data)
             await localStorage().setData('token', data["access_token"]);

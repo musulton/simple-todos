@@ -1,20 +1,9 @@
 import React from 'react'
 import {View, Text, StyleSheet} from 'react-native'
-import {useDispatch} from "react-redux";
 
-import {deleteTodo, toggleComplete} from "../../../shared/store/todo/ToDoAction";
 import ToDoButton from "../../../shared/components/ToDoButton";
 
-const ToDo = ({todo}) => {
-    const dispatch = useDispatch();
-
-    const onTodoComplete = (idx) => {
-        dispatch(toggleComplete(idx));
-    }
-    const onTodoDelete = (idx) => {
-        dispatch(deleteTodo(idx));
-    }
-
+const ToDo = ({todo, onCompleted, onDelete}) => {
     return (
         <View style={styles.todoContainer}>
             <Text style={[styles.todoText, todo.complete ? styles.completeTodoText : null]}>
@@ -23,10 +12,10 @@ const ToDo = ({todo}) => {
             <View style={styles.buttons}>
                 <ToDoButton
                     name='Done'
-                    onPress={() => onTodoComplete(todo.todoIndex)}/>
+                    onPress={() => onCompleted(todo)}/>
                 <ToDoButton
                     name='Delete'
-                    onPress={() => onTodoDelete(todo.todoIndex)}/>
+                    onPress={() => onDelete(todo.id)}/>
             </View>
         </View>
     )

@@ -5,13 +5,7 @@ import {useSelector} from "react-redux";
 import ToDo from "./ToDo";
 import EmptyState from "../../../shared/components/EmptyState";
 
-const todoItems = ({item}) => {
-    return (
-        <ToDo todo={item}/>
-    );
-};
-
-const ToDoList = () => {
+const ToDoList = ({onDelete, onCompleted}) => {
     const todos = useSelector(state => state.ToDoReducer.todo);
     const type = useSelector(state => state.ToDoReducer.type);
 
@@ -29,9 +23,9 @@ const ToDoList = () => {
     return (
         <FlatList
             data={selectedTodos}
-            renderItem={todoItems}
+            renderItem={({item}) => <ToDo todo={item} onCompleted={onCompleted} onDelete={onDelete}/> }
             keyExtractor={item => item.id}
-            contentContainerStyle={selectedTodos.length > 0 ? {} : {flex: 1}}
+            contentContainerStyle={selectedTodos?.length > 0 ? {} : {flex: 1}}
             ListEmptyComponent={<EmptyState text={"Data is still empty"} />}
         />
     )

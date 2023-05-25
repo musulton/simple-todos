@@ -1,12 +1,12 @@
 import {useDispatch} from "react-redux";
 
 import {showError, showLoading} from "../../shared/store/app/AppAction";
-import {addTodo, setTodo} from "../../shared/store/todo/ToDoAction";
+import {setTodo} from "../../shared/store/todo/ToDoAction";
 import {MandatoryError} from "../../shared/utils/AppError";
 
 export const Todo = (service) => {
     const dispatch = useDispatch();
-    const {addTodoService, getTodoService} = service();
+    const {addTodoService, getTodoService, updateTodoService, deleteTodoService} = service();
 
     const onSubmitTodo = async (todoName, onSuccess) => {
         try {
@@ -40,11 +40,39 @@ export const Todo = (service) => {
         }
     }
 
+    const onDeleteTodo = async (id, onSuccess) => {
+        try {
+            dispatch(showLoading(true));
+            const todos = await deleteTodoService(id);
+            dispatch(setTodo(todos))
+            onSuccess?.()
+        } catch (e) {
+            dispatch(showError(e.message));
+        } finally {
+            dispatch(showLoading(false));
+        }
+    }
+
+    const onCompletedTodo = async (todo, onSuccess) => {
+        try {
+            dispatch(showLoading(true));
+            const todos = await updateTodoService(todo);
+            dispatch(setTodo(todos))
+            onSuccess?.()
+        } catch (e) {
+            dispatch(showError(e.message));
+        } finally {
+            dispatch(showLoading(false));
+        }
+    }
+
     const onDismissError = () => dispatch(showError(''));
     return {
         onSubmitTodo,
         onDismissError,
-        onLoadTodo
+        onLoadTodo,
+        onCompletedTodo,
+        onDeleteTodo
     };
 };
 

@@ -19,39 +19,19 @@ client.interceptors.request.use(async (config) => {
     return Promise.reject(error);
 });
 
-const clientService = () => {
-    const get = async (url) => {
-        try {
-            let result = await client.get(url);
-            return result.data;
-        } catch (e) {
-            if (e.response) {
-                if (e.response.status === 401) {
-                    throw new UnauthorizedError("Unauthorized")
-                }
-            } else {
-                throw new GlobalError("Oops")
+const clientService = async ({url, method, params}) => {
+    try {
+        let result = await client[method](url, params);
+        return result.data;
+    } catch (e) {
+        if (e.response) {
+            if (e.response.status === 401) {
+                throw new UnauthorizedError("Unauthorized")
             }
+        } else {
+            throw new GlobalError("Oops")
         }
-    }
-    const post = async (url, params) => {
-        try {
-            let result = await client.post(url, params);
-            return result.data;
-        } catch (e) {
-            if (e.response) {
-                if (e.response.status === 401) {
-                    throw new UnauthorizedError("Unauthorized")
-                }
-            } else {
-                throw new GlobalError("Oops")
-            }
-        }
-    }
-
-    return {
-        get,
-        post
     }
 }
+
 export default clientService;
