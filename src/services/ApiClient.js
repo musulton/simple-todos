@@ -1,9 +1,11 @@
 import axios from "axios";
+import Constants from "expo-constants"
+
 import {GlobalError, UnauthorizedError} from "../shared/utils/AppError";
 import LocalStorage from "../shared/utils/LocalStorage";
 
 const client = axios.create({
-    baseURL: "https://ace3-180-244-28-131.ngrok-free.app",
+    baseURL: Constants.manifest.extra.baseUrl
 });
 
 client.interceptors.request.use(async (config) => {

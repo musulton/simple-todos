@@ -15,6 +15,7 @@ const ToDoScreen = ({todo}) => {
     const [todoName, setTodoName] = useState('');
     const error = useSelector((state) => state.AppReducer.error);
     const isRefetch = useSelector((state) => state.AppReducer.isRefetch);
+
     const onRefetch = () => {
         dispatch(shouldRefetch(true))
     }
