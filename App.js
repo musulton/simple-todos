@@ -10,6 +10,10 @@ import ApiClient from "./src/services/ApiClient";
 const App = () => {
     const store = configureStore()
 
+    if(__DEV__) {
+        import('./src/config/ReactotronConfig').then(() => console.log('Reactotron Configured'))
+    }
+
     return (
         <Provider store={store}>
             <DepProvider services={{apiClient: ApiClient}}>
