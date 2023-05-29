@@ -43,8 +43,7 @@ export const Todo = (service) => {
     const onDeleteTodo = async (id, onSuccess) => {
         try {
             dispatch(showLoading(true));
-            const todos = await deleteTodoService(id);
-            dispatch(setTodo(todos))
+            await deleteTodoService(id);
             onSuccess?.()
         } catch (e) {
             dispatch(showError(e.message));
@@ -56,8 +55,7 @@ export const Todo = (service) => {
     const onCompletedTodo = async (todo, onSuccess) => {
         try {
             dispatch(showLoading(true));
-            const todos = await updateTodoService(todo);
-            dispatch(setTodo(todos))
+            await updateTodoService(todo);
             onSuccess?.()
         } catch (e) {
             dispatch(showError(e.message));
