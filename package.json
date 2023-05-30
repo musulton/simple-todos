@@ -29,12 +29,15 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@testing-library/react-native": "^12.1.2",
     "reactotron-react-native": "^5.0.3"
   },
   "private": true,
   "jest": {
     "preset": "jest-expo",
-    "setupFiles": ["./__test__/setupTests.js"],
+    "setupFiles": [
+      "./__test__/setupTests.js"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
     ]
