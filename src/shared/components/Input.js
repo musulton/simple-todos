@@ -12,6 +12,7 @@ const Input = ({inputValue, onInputChange, placeholder}) => (
             onChangeText={onInputChange}
         />
     </View>)
+
 const styles = StyleSheet.create({
     inputContainer: {
         marginLeft: 20,

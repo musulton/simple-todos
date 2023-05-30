@@ -11,6 +11,7 @@ const Loading = () => {
         </View>
     ) : (<View/>)
 }
+
 const styles = StyleSheet.create({
     loading: {
         flex: 1,

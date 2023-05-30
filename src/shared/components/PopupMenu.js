@@ -18,11 +18,12 @@ const PopupMenu = ({navigation}) => {
     })
     return (
         <View>
-            <Pressable style={{paddingLeft: 30}}
-                       onPress={() => setModalVisible(!modalVisible)}
+            <Pressable
+                data-testid="modal"
+                style={{paddingLeft: 30}}
+                onPress={() => setModalVisible(!modalVisible)}
             >
-                <Icon name={'ellipsis-v'}
-                      size={16}/>
+                <Icon name={'ellipsis-v'} size={16}/>
             </Pressable>
             <Modal
                 animationType="fade"
@@ -32,10 +33,12 @@ const PopupMenu = ({navigation}) => {
                     setModalVisible(!modalVisible);
                 }}
             >
-                <TouchableOpacity style={{flex: 1}} activeOpacity={1}
-                                  onPressOut={() => {
-                                      setModalVisible(false)
-                                  }}>
+                <TouchableOpacity
+                    style={{flex: 1}} activeOpacity={1}
+                    onPressOut={() => {
+                        setModalVisible(false)
+                    }}
+                >
                     <View style={styles.centeredView}>
                         <TouchableWithoutFeedback>
                             <View style={styles.modalView}>

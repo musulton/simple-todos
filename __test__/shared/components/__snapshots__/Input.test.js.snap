@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#ffffff",
+      "elevation": 3,
+      "marginLeft": 20,
+      "marginRight": 20,
+      "shadowColor": "#000000",
+      "shadowOffset": {
+        "height": 3,
+        "width": 3,
+      },
+      "shadowOpacity": 0.2,
+      "shadowRadius": 3,
+    }
+  }
+>
+  <TextInput
+    onChangeText={[MockFunction]}
+    placeholder="Placeholder"
+    placeholderTextColor="#CACACA"
+    selectionColor="#666666"
+    style={
+      {
+        "backgroundColor": "#ffffff",
+        "height": 60,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+      }
+    }
+    value="Value"
+  />
+</View>
+`;
