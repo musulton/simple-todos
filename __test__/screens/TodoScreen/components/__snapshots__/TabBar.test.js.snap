@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabBar should return correctly 1`] = `
+<View
+  style={
+    {
+      "borderTopColor": "#dddddd",
+      "borderTopWidth": 1,
+      "flexDirection": "row",
+      "height": 70,
+    }
+  }
+>
+  <View
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+        null,
+        {
+          "borderLeftColor": "#dddddd",
+          "borderLeftWidth": 1,
+        },
+        null,
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#777777",
+            "fontSize": 16,
+          },
+          null,
+        ]
+      }
+    >
+      All
+    </Text>
+  </View>
+  <View
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+        null,
+        {
+          "borderLeftColor": "#dddddd",
+          "borderLeftWidth": 1,
+        },
+        {
+          "backgroundColor": "#ffffff",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#777777",
+            "fontSize": 16,
+          },
+          {
+            "fontWeight": "bold",
+          },
+        ]
+      }
+    >
+      Active
+    </Text>
+  </View>
+  <View
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+        null,
+        {
+          "borderLeftColor": "#dddddd",
+          "borderLeftWidth": 1,
+        },
+        null,
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "color": "#777777",
+            "fontSize": 16,
+          },
+          null,
+        ]
+      }
+    >
+      Complete
+    </Text>
+  </View>
+</View>
+`;
