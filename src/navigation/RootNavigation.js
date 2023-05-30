@@ -9,6 +9,5 @@ export function navigate(name, params, isReplace = false) {
         } else {
             navigationRef.navigate(name, params);
         }
-
     }
 }

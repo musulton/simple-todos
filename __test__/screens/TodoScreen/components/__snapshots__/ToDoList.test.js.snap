@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToDoList should return correctly 1`] = `
+<RCTScrollView
+  ListEmptyComponent={
+    <EmptyState
+      text="Data is still empty"
+    />
+  }
+  contentContainerStyle={{}}
+  data={
+    [
+      {
+        "complete": false,
+        "id": 1,
+        "title": "title",
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={[]}
+  viewabilityConfigCallbackPairs={[]}
+>
+  <View>
+    <View
+      onFocusCapture={[Function]}
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#ffffff",
+            "borderColor": "#ededed",
+            "borderWidth": 1,
+            "elevation": 3,
+            "flexDirection": "row",
+            "marginLeft": 20,
+            "marginRight": 20,
+            "paddingBottom": 7,
+            "paddingLeft": 14,
+            "paddingTop": 7,
+            "shadowColor": "#000000",
+            "shadowOffset": {
+              "height": 3,
+              "width": 3,
+            },
+            "shadowOpacity": 0.2,
+            "shadowRadius": 3,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 16,
+              },
+              null,
+            ]
+          }
+        >
+          title
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "flex-end",
+            }
+          }
+        >
+          <View
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "flex-end",
+                "borderColor": "#ededed",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "marginRight": 5,
+                "padding": 7,
+                "width": 50,
+              }
+            }
+          >
+            <Text />
+          </View>
+          <View
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "alignItems": "center",
+                "alignSelf": "flex-end",
+                "borderColor": "#ededed",
+                "borderRadius": 4,
+                "borderWidth": 1,
+                "marginRight": 5,
+                "padding": 7,
+                "width": 50,
+              }
+            }
+          >
+            <Text />
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`ToDoList should return empty state correctly when data is empty 1`] = `
+<RCTScrollView
+  ListEmptyComponent={
+    <EmptyState
+      text="Data is still empty"
+    />
+  }
+  contentContainerStyle={
+    {
+      "flex": 1,
+    }
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={[]}
+  viewabilityConfigCallbackPairs={[]}
+>
+  <View>
+    <EmptyState
+      onLayout={[Function]}
+      text="Data is still empty"
+    />
+  </View>
+</RCTScrollView>
+`;

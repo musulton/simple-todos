@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1685440164338" clover="3.2.0">
+  <project timestamp="1685440164338" name="All files">
+    <metrics statements="269" coveredstatements="231" conditionals="54" coveredconditionals="42" methods="96" coveredmethods="68" elements="419" coveredelements="341" complexity="0" loc="269" ncloc="269" packages="13" files="35" classes="35"/>
+    <package name="navigation">
+      <metrics statements="16" coveredstatements="12" conditionals="5" coveredconditionals="3" methods="9" coveredmethods="3"/>
+      <file name="NavigationHelper.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\navigation\NavigationHelper.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="NavigationPath.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\navigation\NavigationPath.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+      </file>
+      <file name="RootNavigation.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\navigation\RootNavigation.js">
+        <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="RootNavigator.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\navigation\RootNavigator.js">
+        <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="1"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="screens.LoginScreen">
+      <metrics statements="25" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="5"/>
+      <file name="Login.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\screens\LoginScreen\Login.js">
+        <metrics statements="13" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+      <file name="LoginScreen.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\screens\LoginScreen\LoginScreen.js">
+        <metrics statements="12" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="2"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="screens.SplashScreen">
+      <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="SplashScreen.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\screens\SplashScreen\SplashScreen.js">
+        <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="screens.TodoScreen">
+      <metrics statements="59" coveredstatements="50" conditionals="6" coveredconditionals="4" methods="16" coveredmethods="10"/>
+      <file name="ToDoScreen.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\screens\TodoScreen\ToDoScreen.js">
+        <metrics statements="23" coveredstatements="17" conditionals="4" coveredconditionals="2" methods="10" coveredmethods="4"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="32" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="3" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+      </file>
+      <file name="Todo.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\screens\TodoScreen\Todo.js">
+        <metrics statements="36" coveredstatements="33" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="screens.TodoScreen.components">
+      <metrics statements="24" coveredstatements="22" conditionals="7" coveredconditionals="4" methods="14" coveredmethods="9"/>
+      <file name="TabBar.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\screens\TodoScreen\components\TabBar.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+      </file>
+      <file name="ToDo.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\screens\TodoScreen\components\ToDo.js">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="24" count="4" type="stmt"/>
+      </file>
+      <file name="ToDoList.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\screens\TodoScreen\components\ToDoList.js">
+        <metrics statements="12" coveredstatements="10" conditionals="5" coveredconditionals="3" methods="8" coveredmethods="4"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="13" count="5" type="cond" truecount="1" falsecount="2"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="services">
+      <metrics statements="33" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+      <file name="LoginService.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\services\LoginService.js">
+        <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+      </file>
+      <file name="TodoService.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\services\TodoService.js">
+        <metrics statements="23" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="49" count="4" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="61" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.assets.images">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="enigma.png" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\assets\images\enigma.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="index.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\assets\images\index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="shared.components">
+      <metrics statements="42" coveredstatements="36" conditionals="17" coveredconditionals="16" methods="19" coveredmethods="12"/>
+      <file name="EmptyState.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\components\EmptyState.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+      </file>
+      <file name="Heading.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\components\Heading.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+      </file>
+      <file name="Input.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\components\Input.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+      </file>
+      <file name="Loading.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\components\Loading.js">
+        <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+      <file name="MessageBox.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\components\MessageBox.js">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="PopupMenu.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\components\PopupMenu.js">
+        <metrics statements="14" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="2"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+      </file>
+      <file name="SubmitButton.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\components\SubmitButton.js">
+        <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="4" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+      </file>
+      <file name="TabBarItem.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\components\TabBarItem.js">
+        <metrics statements="4" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="19" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+      </file>
+      <file name="ToDoButton.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\components\ToDoButton.js">
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.context">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="DependencyContext.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\context\DependencyContext.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.store.app">
+      <metrics statements="10" coveredstatements="9" conditionals="5" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <file name="AppAction.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\store\app\AppAction.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+      </file>
+      <file name="AppReducer.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\store\app\AppReducer.js">
+        <metrics statements="7" coveredstatements="6" conditionals="5" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="3" type="cond" truecount="3" falsecount="1"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.store.login">
+      <metrics statements="8" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <file name="LoginAction.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\store\login\LoginAction.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+      </file>
+      <file name="LoginReducer.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\store\login\LoginReducer.js">
+        <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="2" type="cond" truecount="2" falsecount="1"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.store.todo">
+      <metrics statements="8" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <file name="ToDoAction.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\store\todo\ToDoAction.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="ToDoReducer.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\store\todo\ToDoReducer.js">
+        <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="2" type="cond" truecount="2" falsecount="1"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="shared.utils">
+      <metrics statements="28" coveredstatements="26" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="7"/>
+      <file name="AppError.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\utils\AppError.js">
+        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+      </file>
+      <file name="LocalStorage.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\utils\LocalStorage.js">
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="4"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+      </file>
+      <file name="constants.js" path="D:\work\enigma\materi\smm\expo-todo-list\src\shared\utils\constants.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="2" count="9" type="stmt"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
