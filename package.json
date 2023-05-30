@@ -7,7 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest"
+    "test": "jest",
+    "testWithCoverage": "jest --coverage"
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
